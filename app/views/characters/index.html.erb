@@ -1,0 +1,26 @@
+<h1>Mario Party!</h1>
+
+<form>
+  <fieldset>
+    <legend>New Character</legend>
+    <label>
+      Character Name
+      <input type="text" name="name" />
+    </label>
+    <label>
+      Image URL
+      <input type="text" name="img_url" />
+    </label>
+    <button>Save</button>
+  </fieldset>
+</form>
+
+<div id="container"></div>
+
+<audio id='coin' src='http://themushroomkingdom.net/sounds/wav/smw/smw_coin.wav'></audio>
+
+<script type="template" id="character-html">
+  <h2><%%= character.get('name') %> -- <%%= character.get('coins') %></h2>
+  <span> &times; </span>
+  <img class="character" src="<%%= character.get('img_url') %>"/>
+</script>
